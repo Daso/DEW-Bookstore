@@ -1,9 +1,14 @@
 Bookstore::Application.routes.draw do
+ 
+  resources :users do
+  member do
+    get "add_book"
+  end
+end
+  
   resources :authors
 
   resources :user_books
-
-  resources :users
 
   resources :people_books
 
